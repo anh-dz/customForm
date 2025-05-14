@@ -1,12 +1,12 @@
 .card {
-  max-width: 600px;
+  width: 650px;
   border: 1px solid rgba(0, 0, 0, 0.12);
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   padding: 0;
   margin: 24px;
   overflow: hidden;
-  padding-bottom: 16px;
+  /* padding-bottom: 16px; */
 }
 
 .divider {
@@ -24,6 +24,13 @@
   padding: 0;
   width: 100%;
   display: block;
+}
+
+.horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  box-sizing: border-box;
 }
 
 .vertical {
