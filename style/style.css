@@ -1,0 +1,119 @@
+body {
+  display: flex;
+  background-color: rgb(252, 252, 252);
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  border-radius: 5px;
+  padding: 10px 15px;
+  transition: 0.2s;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn-container {
+  margin-top: 16px;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 0px;
+}
+
+.btn-without-border {
+  color: rgb(25, 118, 210);
+  background-color: transparent;
+  border: none;
+}
+
+.btn-without-border:hover {
+  background-color: rgba(25, 118, 210, 0.04);
+}
+
+.btn-custom {
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0.26);
+  border: none;
+}
+
+.btn-send {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(25, 118, 210, 0.5);
+  color: rgb(25, 118, 210);
+}
+
+.btn-send:hover {
+  background-color: rgba(25, 118, 210, 0.04);
+}
+
+.music-container {
+  display: flex;
+}
+
+.music-img {
+  margin: 16px;
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  display: block;
+}
+
+.title-container {
+  margin: 0;
+  padding: 0;
+}
+
+.title-text {
+  font-size: 30px;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.grey-text {
+  margin-top: 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.get-input {
+  flex: 1;
+  height: 48px;
+  padding-left: 10px;
+  color: rgba(0, 0, 0, 0.87);
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 5px;
+  width: 500px;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+.get-input::placeholder {
+  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.get-input:focus {
+  outline: 0px;
+  outline-offset: -1px;
+}
+
+p {
+  color: rgba(0, 0, 0, 0.87);
+  margin-top: 0;
+  margin-bottom: 16px;
+  margin-left: 24px;
+  margin-right: 24px;
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.18;
+}
+
+.get-input-container {
+  margin: 24px;
+}
