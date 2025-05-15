@@ -10,7 +10,7 @@ btnPlay.addEventListener("click", () => {
     btnPlay.textContent = "Pause";
   } else {
     audio.pause();
-    btnPlay.textContent = "Start";
+    btnPlay.textContent = "Play";
   }
 });
 
