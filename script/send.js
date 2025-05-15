@@ -22,7 +22,7 @@ const db = getFirestore(app);
 
 const btn_send = document.getElementById("sendBtn");
 
-btn_send.addEventListener("click", () => {
+btn_send.addEventListener("click", async () => {
   const inputName = document.getElementById("inputName").value;
 
   const inputFeel = document.getElementById("inputFeel").value;
@@ -31,7 +31,7 @@ btn_send.addEventListener("click", () => {
 
   var inputNote = document.getElementById("inputNote").value;
 
-  addDoc(collection(db, "users"), {
+  await addDoc(collection(db, "users"), {
     Name: inputName,
     Feel: inputFeel,
     Memories: inputMemories,
