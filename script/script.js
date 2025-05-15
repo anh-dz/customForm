@@ -1,0 +1,20 @@
+const audio = document.getElementById("bgMusic");
+const btn_music = document.getElementById("playPauseBtn");
+
+btn_music.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    btn_music.textContent = "Dừng";
+  } else {
+    audio.pause();
+    btn_music.textContent = "Phát";
+  }
+});
+
+const btn_replay = document.getElementById("replayBtn");
+
+btn_replay.addEventListener("click", () => {
+  audio.pause();
+  audio.currentTime = 0;
+  audio.play();
+});

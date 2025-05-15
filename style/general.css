@@ -29,6 +29,17 @@ p {
   letter-spacing: 0.18;
 }
 
+.title-text {
+  font-size: 30px;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.grey-text {
+  margin-top: 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+
 @media (max-width: 768px) {
   .card {
     max-width: 500px;
@@ -77,6 +88,14 @@ p {
     font-size: 18px;
   }
 
+  .title-text {
+    font-size: 24px;
+  }
+
+  .get-input {
+    font-size: 16px;
+  }
+
   .card {
     max-width: 360px;
     margin: 16px;
@@ -90,6 +109,10 @@ p {
 @media (max-width: 320px) {
   p, button {
     font-size: 16px;
+  }
+
+  .title-text {
+    font-size: 18px;
   }
 
   .card {
