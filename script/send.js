@@ -23,20 +23,20 @@ const db = getFirestore(app);
 const btn_send = document.getElementById("sendBtn");
 
 btn_send.addEventListener("click", () => {
-  // const inputName = document.getElementById("inputName").value;
+  const inputName = document.getElementById("inputName").value;
 
-  // const inputFeel = document.getElementById("inputFeel").value;
+  const inputFeel = document.getElementById("inputFeel").value;
 
-  // const inputMemories = document.getElementById("inputMemories").value;
+  const inputMemories = document.getElementById("inputMemories").value;
 
-  // var inputNote = document.getElementById("inputNote").value;
+  var inputNote = document.getElementById("inputNote").value;
 
-  // addDoc(collection(db, "users"), {
-  //   Name: inputName,
-  //   Feel: inputFeel,
-  //   Memories: inputMemories,
-  //   Note: inputNote
-  // });
+  addDoc(collection(db, "users"), {
+    Name: inputName,
+    Feel: inputFeel,
+    Memories: inputMemories,
+    Note: inputNote
+  });
 
   window.location.href = "xiexie-en.html";
 });
