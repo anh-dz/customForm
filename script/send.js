@@ -38,5 +38,5 @@ btn_send.addEventListener("click", () => {
   //   Note: inputNote
   // });
 
-  window.location.href = "xiexie.html";
+  window.location.href = "xiexie-en.html";
 });

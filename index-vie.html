@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/card.css">
+  <link rel="stylesheet" href="style/general.css">
+  <title>customForm</title>
+</head>
+<body>
+  <div class="card">
+    <div class="img-container">
+      <img src="assets/alya-look.jpg" class="img">
+    </div>
+    <div class="title-container">
+      <p class="title-text">Lưu bút của NA 😺</p>
+      <p class="grey-text">Create and deployed by @nhatanhpico</p>
+    </div>
+    <div class="divider"></div>
+    <div>
+      <p>Hello mọi người, chúng ta đã gặp nhau được gần 1 năm. Thì tớ cũng chẳng định làm lưu bút đâu vì tớ lười. Nhưng mà tớ nghĩ rằng sau này nếu như chẳng may phải rất lâu nữa chúng ta mới gặp lại, thì tớ cần một chút kỉ niệm nào đó để chúng ta có thể có chủ đề nói chuyện với nhau. Ban đầu tớ định dùng google form, nhưng sau khi nghĩ lại thì quyết định làm riêng một trang web để điều này trở nên thật đặc biệt. Cây nhà lá vườn vip pzo 😺</p>
+
+      <p>Đây là project đầu tiên của tớ trong năm học đại học và cũng là project tớ dùng cho mai sau này =)))) chẳng biết nữa nma nếu tớ có giàu sau này, thì sự hiện diện của mọi ngừi ở hiện tại đều đáng quý cả hehe. 🍭</p>
+    </div>
+    <div class="divider"></div>
+    <div class="btn-container">
+      <button class="btn-without-border">Bắt đầu thui</button>
+      <!-- <button class="btn-custom">Đọc lại thư của cậu</button> -->
+    </div>
+  </div>
+  
+  <div class="card">
+    <div class="horizontal">
+      <div class="vertical">
+        <img src="assets/music.jpg" class="music-img">
+      </div>
+      <div>
+        <div class="title-container-mobile">
+          <p class="title-text">你，好不好（周興哲）</p>
+          <p class="grey-text">周興哲</p>
+          <p>Một bài hát mà dạo này tớ hay nghe</p>
+          <audio id="bgMusic" src="assets/music.mp3"></audio>
+        </div>
+        <div class="btn-container-mobile">
+          <button class="btn-without-border" id="playPauseBtn">Phát</button>
+          <button class="btn-without-border" id="replayBtn">Bắt đầu lại</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="card">
+      <div class="title-container">
+        <p class="title-text">Tên của cậu là gì?</p>
+        <p class="grey-text">Hên xui gặp nhau thì cho kẹo</p>
+      </div>
+      <div class="get-input-container">
+        <input class="get-input" id="inputName" type="text" placeholder="你叫什麼？" required>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="title-container">
+        <p class="title-text">Cậu có cảm nhận gì về tớ không?</p>
+        <p class="grey-text">Suốt thời gian được tiếp xúc, làm việc,... cậu thấy thế nào về tớ 🐰</p>
+      </div>
+      <div class="get-input-container">
+        <input class="get-input" id="inputFeel" type="text" placeholder="請說！" required>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="title-container">
+        <p class="title-text">Chúng mình có kỉ niệm gì với nhau khum</p>
+        <p class="grey-text">Nhiều hoặc ít, tớ k biết, nma kỉ niệm cũng tuyệt mà nhỉ 😺</p>
+      </div>
+      <div class="get-input-container">
+        <input class="get-input" id="inputMemories" type="text" placeholder="Một điều gì đó thật đặc biệt" required>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="title-container">
+        <p class="title-text">Cậu có muốn gửi lời nhắn gì cho tớ không?</p>
+        <p class="grey-text">Một lời cảm ơn hoặc trách móc chẳng hạn</p>
+      </div>
+      <div class="get-input-container">
+        <input class="get-input" id="inputNote" type="text" placeholder="Gửi đi nèee" required>
+      </div>
+    </div>
+
+    <div class="card">
+      <div>
+        <p class="title-text">Vậy là xong ròi nèee!!!</p>
+        <p class="grey-text">Cảm ơn cậu nhaaa</p>
+      </div>
+      <div class="img-container">
+        <img src="assets/alya.jpg" class="img">
+      </div>
+      <div>
+        <p>Cảm ơn cậu nhíeee, kikii. Tớ không biết năm học tiếp theo chúng ta sẽ chung môn học nào đó hoặc có cơ hội nào làm các dự án cùng nhau không, nếu có gặp nhau thì hãy cùng thể hiện hết đam mê của mình nhé!!!</p>
+      </div>
+      <div class="btn-container">
+        <button class="btn-send" id="sendBtn">
+          Bấm để gửi
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+  </div>
+  <script src="https://kit.fontawesome.com/55ff335245.js" crossorigin="anonymous"></script>
+  <script src="script/music_control.js"></script>
+  <script type="module" src="script/send.js"></script>
+</body>
+</html>
