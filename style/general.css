@@ -10,12 +10,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-button {
+button, a {
   border-radius: 5px;
   padding: 10px 15px;
   transition: 0.2s;
   cursor: pointer;
   font-size: 20px;
+}
+
+a {
+  text-decoration: none;
 }
 
 p {
@@ -84,7 +88,7 @@ p {
 }
 
 @media (max-width: 480px) {
-  p, button {
+  p, button, a {
     font-size: 18px;
   }
 
@@ -107,7 +111,7 @@ p {
 }
 
 @media (max-width: 320px) {
-  p, button {
+  p, button, a {
     font-size: 16px;
   }
 

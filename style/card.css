@@ -37,3 +37,15 @@
   align-items: center;
   flex-direction: column;
 }
+
+.link-ytb {
+  color: rgb(25, 118, 210);
+}
+
+.link-ig {
+  color: rgba(120, 0, 142, 0.26);
+}
+
+.link-ytb:hover {
+  background-color: rgba(25, 118, 210, 0.04);
+}

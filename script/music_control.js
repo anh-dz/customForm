@@ -1,5 +1,6 @@
 const audio = document.getElementById("bgMusic");
 const btn_music = document.getElementById("playPauseBtn");
+const btn_replay = document.getElementById("replayBtn");
 
 btn_music.addEventListener("click", () => {
   if (audio.paused) {
@@ -10,8 +11,6 @@ btn_music.addEventListener("click", () => {
     btn_music.textContent = "Phát";
   }
 });
-
-const btn_replay = document.getElementById("replayBtn");
 
 btn_replay.addEventListener("click", () => {
   if (audio.paused) {
