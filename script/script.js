@@ -14,6 +14,9 @@ btn_music.addEventListener("click", () => {
 const btn_replay = document.getElementById("replayBtn");
 
 btn_replay.addEventListener("click", () => {
+  if (audio.paused) {
+    btn_music.textContent = "Dừng";
+  }
   audio.pause();
   audio.currentTime = 0;
   audio.play();
