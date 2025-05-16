@@ -32,6 +32,7 @@ window.onload = function () {
 const btnSave = document.getElementById("saveBtn");
 
 btnSave.addEventListener("click", () => {
+  btnDeleteData.style.color = "rgb(229, 80, 80)";
   const data = {
     name: nameInput.value,
     feel: feelInput.value,
