@@ -59,7 +59,8 @@ p {
 
   .get-input {
     width: 100%;
-    max-width: 400px;
+    max-width: 426px;
+    font-size: 18px;
   }
 
   .title-container-mobile{
@@ -83,7 +84,7 @@ p {
 
   .get-input {
     width: 100%;
-    max-width: 350px;
+    max-width: 376px;
   }
 }
 
@@ -106,7 +107,7 @@ p {
   }
 
   .get-input {
-    max-width: 260px;
+    max-width: 286px;
   }
 }
 

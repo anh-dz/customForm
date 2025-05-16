@@ -46,15 +46,21 @@
 
 .get-input {
   flex: 1;
-  height: 48px;
   color: rgba(0, 0, 0, 0.87);
+  width: 576px;
+  min-height: 35px;
   padding: 12px;
   font-size: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.23);
+  line-height: 1.5em;
+  border: 1px solid rgba(0,0,0,0.23);
   border-radius: 5px;
-  width: 500px;
+  /* overflow: hidden; */
+  resize: none;
   -webkit-font-smoothing: antialiased;
-  overflow: hidden;
+}
+
+.get-input.expanding {
+  height: auto;
 }
 
 .get-input::placeholder {
@@ -66,6 +72,38 @@
   outline-offset: -1px;
 }
 
+.get-input-no-expand-container {
+  margin: 24px;
+}
+
 .get-input-container {
   margin: 24px;
+  display: grid;
+}
+
+.get-input-container::after {
+  /* Note the weird space! Needed to preventy jumpy behavior */
+  content: attr(data-replicated-value) " ";
+
+  /* This is how textarea text behaves */
+  white-space: pre-wrap;
+
+  /* Hidden from view, clicks, and screen readers */
+  visibility: hidden;
+}
+
+.get-input-container > textarea {
+  /* You could leave this, but after a user resizes, then it ruins the auto sizing */
+  resize: none;
+
+  /* Firefox shows scrollbar on growth, you can hide like this. */
+  overflow: hidden;
+}
+
+.get-input-container > textarea,
+.get-input-container::after {
+  font: inherit;
+
+  /* Place on top of each other */
+  grid-area: 1 / 1 / 2 / 2;
 }

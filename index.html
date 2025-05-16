@@ -59,8 +59,8 @@
         <p class="title-text">What is your name?</p>
         <p class="grey-text">你叫什麼？</p>
       </div>
-      <div class="get-input-container">
-        <input class="get-input" id="inputName" type="text" placeholder="Chinese or English name is fine" required>
+      <div class="get-input-no-expand-container">
+        <input class="get-input" id="inputName" type="text" placeholder="Chinese or English name is fine">
       </div>
     </div>
 
@@ -70,7 +70,7 @@
         <p class="grey-text">During the time we met and studied together, how did you feel about me 🐰</p>
       </div>
       <div class="get-input-container">
-        <input class="get-input" id="inputFeel" type="text" placeholder="請說！" required>
+        <textarea class="get-input" id="inputFeel" type="text" placeholder="請說！" onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
       </div>
     </div>
 
@@ -80,7 +80,7 @@
         <p class="grey-text">Many or a little, I don't know, but memories are great, right 😺</p>
       </div>
       <div class="get-input-container">
-        <input class="get-input" id="inputMemories" type="text" placeholder="Something sooo special" required>
+        <textarea class="get-input" id="inputMemories" type="text" placeholder="Something sooo special" onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
       </div>
     </div>
 
@@ -90,7 +90,7 @@
         <p class="grey-text">Thank me for something or even a little complaint, perhaps. Btw you have to fill all of the input to submit the form 🗿</p>
       </div>
       <div class="get-input-container">
-        <input class="get-input" id="inputNote" type="text" placeholder="or maybe special note -o-" required>
+        <textarea class="get-input" id="inputNote" type="text" placeholder="maybe special note -o-" onInput="this.parentNode.dataset.replicatedValue = this.value"></textarea>
       </div>
     </div>
 
