@@ -17,7 +17,8 @@
 
 .btn-custom {
   background-color: rgba(0, 0, 0, 0);
-  color: rgb(229, 80, 80);
+  color: rgba(0, 0, 0, 0.26);
+  
   border: none;
 }
 

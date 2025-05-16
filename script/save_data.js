@@ -3,19 +3,29 @@ const feelInput = document.getElementById('inputFeel');
 const memoryInput = document.getElementById('inputMemories');
 const noteInput = document.getElementById('inputNote');
 
+const btnDeleteData = document.getElementById("deleteDataBtn");
+
+btnDeleteData.addEventListener("click", () => {
+	localStorage.clear();
+  btnDeleteData.style.color = "rgba(0, 0, 0, 0.26)";
+});
+
 window.onload = function () {
   const savedData = JSON.parse(localStorage.getItem("memoryNote")) || {};
 
-  nameInput.value = savedData.name || "";
-  feelInput.value = savedData.feel || "";
-  memoryInput.value = savedData.memory || "";
-  noteInput.value = savedData.note || "";
-  const showSteps = nameInput.value.trim() !== '';
-  hiddenSteps.forEach(div => {
-    div.style.display = showSteps ? 'block' : 'none';
-  });
-
-  checkAllFilled();
+  if (Object.keys(savedData).length > 0) {
+    btnDeleteData.style.color = "rgb(229, 80, 80)";
+    nameInput.value = savedData.name || "";
+    feelInput.value = savedData.feel || "";
+    memoryInput.value = savedData.memory || "";
+    noteInput.value = savedData.note || "";
+    const showSteps = nameInput.value.trim() !== '';
+    hiddenSteps.forEach(div => {
+      div.style.display = showSteps ? 'block' : 'none';
+    });
+  
+    checkAllFilled(); 
+  }
 };
 
 
@@ -29,13 +39,6 @@ btnSave.addEventListener("click", () => {
     note: noteInput.value
   };
   localStorage.setItem("memoryNote", JSON.stringify(data));
-});
-
-const btnDeleteData = document.getElementById("deleteDataBtn");
-
-btnDeleteData.addEventListener("click", () => {
-	localStorage.clear();
-  btnDeleteData.style.color = "rgba(0, 0, 0, 0.26)";
 });
 
 // all intermediate cards (step 2–4)
