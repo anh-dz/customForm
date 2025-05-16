@@ -67,5 +67,5 @@ nameInput.addEventListener('input', () => {
 // window.addEventListener('DOMContentLoaded', () => {
 //   hiddenSteps.forEach(div => div.style.display = 'none');
 //   finalCard.style.display = 'none';
-//   btnPlay.textContent = 'Start';
+//   btnPlay.textContent = 'Play';
 // });
