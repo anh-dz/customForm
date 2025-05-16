@@ -1,8 +1,8 @@
 // ==== MUSIC CONTROL ====
 
-const audio      = document.getElementById("bgMusic");
-const btnPlay    = document.getElementById("playPauseBtn");
-const btnReplay  = document.getElementById("replayBtn");
+const audio = document.getElementById("bgMusic");
+const btnPlay = document.getElementById("playPauseBtn");
+const btnReplay = document.getElementById("replayBtn");
 
 btnPlay.addEventListener("click", () => {
   if (audio.paused) {
@@ -15,7 +15,6 @@ btnPlay.addEventListener("click", () => {
 });
 
 btnReplay.addEventListener("click", () => {
-  // if we’re replaying from paused state, make sure button shows “Pause”
   if (audio.paused) {
     btnPlay.textContent = "Pause";
   }
@@ -26,15 +25,15 @@ btnReplay.addEventListener("click", () => {
 
 // ==== INPUT SEQUENCE & FINAL CARD SHOW/HIDE ====
 
-const nameInput    = document.getElementById('inputName');
-const feelInput    = document.getElementById('inputFeel');
-const memoryInput  = document.getElementById('inputMemories');
-const noteInput    = document.getElementById('inputNote');
+const nameInput = document.getElementById('inputName');
+const feelInput = document.getElementById('inputFeel');
+const memoryInput = document.getElementById('inputMemories');
+const noteInput = document.getElementById('inputNote');
 
 // all intermediate cards (step 2–4)
-const hiddenSteps  = document.querySelectorAll('.hiddenDiv:not(#finalCard)');
+const hiddenSteps = document.querySelectorAll('.hiddenDiv:not(#finalCard)');
 // final “send” card
-const finalCard    = document.getElementById('finalCard');
+const finalCard = document.getElementById('finalCard');
 
 /**
  * Check whether all four text inputs have non-empty values.
@@ -65,8 +64,8 @@ nameInput.addEventListener('input', () => {
 
 // ==== INITIAL STATE ON PAGE LOAD ====
 // hide everything except the very first card
-window.addEventListener('DOMContentLoaded', () => {
-  hiddenSteps.forEach(div => div.style.display = 'none');
-  finalCard.style.display = 'none';
-  btnPlay.textContent = 'Start';
-});
+// window.addEventListener('DOMContentLoaded', () => {
+//   hiddenSteps.forEach(div => div.style.display = 'none');
+//   finalCard.style.display = 'none';
+//   btnPlay.textContent = 'Start';
+// });
