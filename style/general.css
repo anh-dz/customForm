@@ -1,6 +1,6 @@
 body {
   display: flex;
-  background-color: rgb(252, 252, 252);
+  background-color: var(--bg);
   flex-direction: column;
   align-items: center;
   margin: 0;
@@ -8,6 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: 0.2s;
 }
 
 button, a {
@@ -23,7 +24,7 @@ a {
 }
 
 p {
-  color: rgba(0, 0, 0, 0.87);
+  color: var(--text-color);
   margin-top: 0;
   margin-bottom: 16px;
   margin-left: 24px;
@@ -41,7 +42,7 @@ p {
 
 .grey-text {
   margin-top: 0;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--grey-text);
 }
 
 @media (max-width: 768px) {
@@ -52,7 +53,6 @@ p {
   .horizontal {
     display: flex;
     flex-direction: column;
-    align-items: space-between;
     align-items: stretch;
     box-sizing: border-box;
   }

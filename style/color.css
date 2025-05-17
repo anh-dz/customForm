@@ -1,0 +1,33 @@
+:root {
+    --cardbg: rgb(255, 255, 255);
+    --cardborder: rgba(0, 0, 0, 0.12);
+    --divider: #ddd;
+    --link-ig: rgba(120, 0, 142, 0.26);
+    --btn-custom-bg: rgba(0, 0, 0, 0);
+    --btn-custom-text: rgba(0, 0, 0, 0.26);
+
+    --bg: rgb(252, 252, 252);
+    --text-color: rgba(0, 0, 0, 0.87);
+    --grey-text: rgba(0, 0, 0, 0.6);
+
+    --btn-bg: rgb(255, 255, 255);
+    --input-bg: rgb(255, 255, 255);
+    --input-border: rgba(0, 0, 0, 0.23);
+}
+
+.dark-mode {
+    --cardbg: rgb(32, 32, 32);
+    --cardborder: rgb(50, 50, 50);
+    --divider: rgb(50, 50, 50);
+    --link-ig: rgb(150, 20, 175);
+    --btn-custom-bg: rgba(255, 255, 255, 0);
+    --btn-custom-text: rgba(255, 255, 255, 0.26);
+
+    --bg: rgb(25, 24, 24);
+    --text-color: rgba(255, 255, 255, 0.87);
+    --grey-text: rgba(255, 255, 255, 0.6);
+
+    --btn-bg: rgb(32, 32, 32);
+    --input-bg: rgb(32, 32, 32);
+    --input-border: rgb(63, 63, 63);
+}

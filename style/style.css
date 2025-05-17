@@ -16,14 +16,14 @@
 }
 
 .btn-custom {
-  background-color: rgba(0, 0, 0, 0);
-  color: rgba(0, 0, 0, 0.26);
+  background-color: var(--btn-custom-bg);
+  color: var(--btn-custom-text);
   
   border: none;
 }
 
 .btn-send {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--btn-bg);
   border: 1px solid rgba(25, 118, 210, 0.5);
   color: rgb(25, 118, 210);
 }
@@ -47,13 +47,14 @@
 
 .get-input {
   flex: 1;
-  color: rgba(0, 0, 0, 0.87);
+  background-color: var(--input-bg);
+  color: var(--text-color);
   width: 576px;
   min-height: 35px;
   padding: 12px;
   font-size: 20px;
   line-height: 1.5em;
-  border: 1px solid rgba(0,0,0,0.23);
+  border: 1px solid var(--input-border);
   border-radius: 5px;
   /* overflow: hidden; */
   resize: none;

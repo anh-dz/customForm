@@ -1,3 +1,5 @@
+const toggleBtn = document.getElementById('darkModeToggle');
+const body = document.body;
 const nameInput = document.getElementById('inputName');
 const feelInput = document.getElementById('inputFeel');
 const memoryInput = document.getElementById('inputMemories');
@@ -5,14 +7,11 @@ const noteInput = document.getElementById('inputNote');
 
 const btnDeleteData = document.getElementById("deleteDataBtn");
 
-btnDeleteData.addEventListener("click", () => {
-	localStorage.clear();
-  btnDeleteData.style.color = "rgba(0, 0, 0, 0.26)";
-});
+let darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+let savedData = JSON.parse(localStorage.getItem("memoryNote")) || {};
+
 
 window.onload = function () {
-  const savedData = JSON.parse(localStorage.getItem("memoryNote")) || {};
-
   if (Object.keys(savedData).length > 0) {
     btnDeleteData.style.color = "rgb(229, 80, 80)";
     nameInput.value = savedData.name || "";
@@ -28,18 +27,42 @@ window.onload = function () {
   }
 };
 
+body.classList.toggle('dark-mode', darkModeEnabled);
+
+btnDeleteData.addEventListener("click", () => {
+  if (darkModeEnabled) {
+    btnDeleteData.style.color = "rgba(255, 255, 255, 0.26)";
+  } else {
+    btnDeleteData.style.color = "rgba(0, 0, 0, 0.26)";
+  }
+	localStorage.clear();
+  savedData = {};
+});
+
+toggleBtn.addEventListener('click', () => {
+  darkModeEnabled = !darkModeEnabled;
+  body.classList.toggle('dark-mode', darkModeEnabled);
+  localStorage.setItem('darkMode', darkModeEnabled);
+  if (Object.keys(savedData).length == 0) {
+    btnDeleteData.style.color = darkModeEnabled ? "rgba(255, 255, 255, 0.26)" : "rgba(0, 0, 0, 0.26)";
+  } else {
+    btnDeleteData.style.color = "rgb(229, 80, 80)";
+  }
+});
 
 const btnSave = document.getElementById("saveBtn");
 
 btnSave.addEventListener("click", () => {
-  btnDeleteData.style.color = "rgb(229, 80, 80)";
-  const data = {
-    name: nameInput.value,
-    feel: feelInput.value,
-    memory: memoryInput.value,
-    note: noteInput.value
-  };
-  localStorage.setItem("memoryNote", JSON.stringify(data));
+  if (nameInput.value != "" || feelInput.value != "" || memoryInput.value != "" || noteInput.value != "") {
+    savedData = {
+      name: nameInput.value,
+      feel: feelInput.value,
+      memory: memoryInput.value,
+      note: noteInput.value
+    };
+    localStorage.setItem("memoryNote", JSON.stringify(savedData));
+    btnDeleteData.style.color = "rgb(229, 80, 80)";
+  }
 });
 
 // all intermediate cards (step 2–4)
