@@ -20,3 +20,7 @@ btnReplay.addEventListener("click", () => {
   audio.currentTime = 0;
   audio.play();
 });
+
+audio.addEventListener("ended", () => {
+  btnPlay.textContent = "Play";
+});
